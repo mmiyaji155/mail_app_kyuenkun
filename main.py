@@ -58,12 +58,7 @@ def get_response(request: Request):
 
 def post_To_Discode(email, code):
     # メールアドレスと回答結果をdiscordに通知する
-    post = f"""
-    メールから新着の回答がありました！
-    確認の上、アクションを設定してください。
-    mail: {email}
-    回答内容: {code}
-    """
+    post = f"メールから新着の回答がありました！\n確認の上、アクションを設定してください。\nmail: {email}\n回答内容: {code}"
     print(post)
     url = "https://discord.com/api/webhooks/1152857787769045033/DnV-t3r3NlEEq9Xthz5SvOgjZ42qnwFwu8T1VQjia03zR4VBtjrUFWSjDnrVdZbfXB4Y"
     discord = Discord(url=url)
