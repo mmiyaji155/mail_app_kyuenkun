@@ -11,25 +11,25 @@ app = FastAPI()
 
 @app.get('/', response_class=HTMLResponse)
 def get_response(request: Request):
-    try:
-        email = request.query_params.get('mail')
-        print('email= ' + email)
-    except:
-        print('no parameters')
-        with open('./templates/thanksPage.html', "r", encoding="utf-8") as file:
-            html_content = file.read()
-        print('exception0')
-        return HTMLResponse(content=html_content)
+    # try:
+    email = request.query_params.get('mail')
+    print('email= ' + email)
+    # except:
+    #     print('no parameters')
+    #     with open('./templates/thanksPage.html', "r", encoding="utf-8") as file:
+    #         html_content = file.read()
+    #     print('exception0')
+    #     return HTMLResponse(content=html_content)
 
-    try:
-        answer = request.query_params.get('code')
-        print('code= ' + answer)
-    except:
-        print('no parameters')
-        with open('./templates/thanksPage.html', "r", encoding="utf-8") as file:
-            html_content = file.read()
-        print('exception1')
-        return HTMLResponse(content=html_content)
+    # try:
+    answer = request.query_params.get('code')
+    print('code= ' + answer)
+    # except:
+    #     print('no parameters')
+    #     with open('./templates/thanksPage.html', "r", encoding="utf-8") as file:
+    #         html_content = file.read()
+    #     print('exception1')
+    #     return HTMLResponse(content=html_content)
 
     # answerによってreturnするtemplateを分岐
     # 187=interests, 263=interview と定義する。
