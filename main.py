@@ -46,7 +46,7 @@ def get_response(request: Request):
     elif answer == '187':
         code = '興味あり'
         post_To_Discode(email, code)
-        response = RedirectResponse(url='https://miyajimmark.wixsite.com/my-site-1')
+        response = RedirectResponse(url='https://www.kasai-lab.com/')
         return response
     # 例外としてthanksページを表示させる処理を書いておく。
     else:
